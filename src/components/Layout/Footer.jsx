@@ -44,7 +44,7 @@ export default function Footer() {
   return (
     <footer className='w-full h-full overflow-hidden bg-[#F5F5F5] py-12 xl:py-20'>
       <div className='container mx-auto px-4 xl:px-6'>
-        <div className='grid grid-cols-1 items-start justify-center sm:grid-cols-2 xl:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 items-start justify-between sm:grid-cols-2 xl:grid-cols-4 gap-6'>
           <div className='flex flex-col justify-start'>
             <div className='flex items-center'>
               <Image
@@ -68,12 +68,22 @@ export default function Footer() {
             <h6 className='text-lg font-medium text-secondaryColor pb-2'>
               Contact
             </h6>
-            <p className='text-sm font-normal text-tersierColor pb-2 md:text-base'>
+            <CustomButton
+              type='link'
+              isExternal
+              target='_blank'
+              href='/'
+              className='text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
               0896-7529-3838
-            </p>
-            <p className='text-sm font-normal text-tersierColor md:text-base'>
+            </CustomButton>
+            <CustomButton
+              type='link'
+              isExternal
+              target='_blank'
+              href='mailto:minerva.rooms@gmail.com'
+              className='text-sm font-normal text-tersierColor md:text-base  hover:text-primaryColor'>
               minerva.rooms@gmail.com
-            </p>
+            </CustomButton>
           </div>
           <div className='flex flex-col justify-start'>
             <h6 className='text-lg font-medium text-secondaryColor pb-2'>
@@ -91,7 +101,7 @@ export default function Footer() {
               );
             })}
           </div>
-          <div className='flex flex-col justify-start'>
+          <div className='flex flex-col justify-end'>
             <h6 className='text-lg font-medium text-secondaryColor'>
               Ikuti Kami
             </h6>
