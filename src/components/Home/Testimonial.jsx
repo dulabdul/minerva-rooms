@@ -23,7 +23,7 @@ export default function Testimonial() {
     },
   ];
   return (
-    <section className='px-4 w-full overflow-hidden py-12 md:py-24'>
+    <section className='w-full overflow-hidden py-12 md:py-24'>
       <div className='container mx-auto'>
         <div className='flex items-center gap-x-2 '>
           <svg

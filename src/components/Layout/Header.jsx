@@ -2,8 +2,33 @@
 import { Navbar } from 'flowbite-react';
 import Image from 'next/image';
 import React from 'react';
+import CustomButton from '../Button';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const path = usePathname();
+  const dataMenu = [
+    {
+      name: 'home',
+      destination: '/',
+    },
+    {
+      name: 'properti',
+      destination: '/properti',
+    },
+    {
+      name: 'Fasilitas',
+      destination: '/fasilitas',
+    },
+    {
+      name: 'Tentang Kami',
+      destination: '/tentang-kami',
+    },
+    {
+      name: 'kontak',
+      destination: '/kontak',
+    },
+  ];
   return (
     <header className='w-full top-0 z-50 absolute scrolled sm:no-scrolled'>
       <Navbar
@@ -27,41 +52,22 @@ export default function Header() {
         </div>
         <Navbar.Collapse className='text-white'>
           <div className='flex flex-col xl:gap-y-4 xl:pl-4 sm:flex-row sm:gap-0 sm:pl-0 sm:gap-x-6'>
-            <li className='active sm:nav-blur font-light sm:font-medium'>
-              <a
-                href=''
-                className='z-10'>
-                Home
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                Properti
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                Fasilitas
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                About Us
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                Kontak
-              </a>
-            </li>
+            {dataMenu.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`active font-light sm:font-medium ${
+                    path !== '/' ? 'text-primaryColor' : 'sm:nav-blur'
+                  }`}>
+                  <CustomButton
+                    className='capitalize'
+                    type='link'
+                    href={item.destination}>
+                    {item.name}
+                  </CustomButton>
+                </li>
+              );
+            })}
           </div>
         </Navbar.Collapse>
       </Navbar>

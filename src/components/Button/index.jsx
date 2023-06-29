@@ -53,8 +53,7 @@ export default function CustomButton(props) {
         <Link
           href={props.href}
           className={className.join(' ')}
-          style={props.style}
-          onClick={onClick}>
+          style={props.style}>
           {props.children}
         </Link>
       );

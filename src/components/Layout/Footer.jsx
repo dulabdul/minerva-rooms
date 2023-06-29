@@ -12,19 +12,19 @@ export default function Footer() {
     },
     {
       name: 'properti',
-      destination: '/',
+      destination: '/properti',
     },
     {
       name: 'Fasilitas',
-      destination: '/',
+      destination: '/fasilitas',
     },
     {
       name: 'Tentang Kami',
-      destination: '/',
+      destination: '/tentang-kami',
     },
     {
       name: 'kontak',
-      destination: '/',
+      destination: '/kontak',
     },
   ];
   const medsos = [

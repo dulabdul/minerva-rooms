@@ -179,7 +179,7 @@ export default function Recommendation() {
             isPrimary
             isHover
             isFlex
-            href='/'>
+            href='/properti'>
             Lihat Semua
           </CustomButton>
         </div>
