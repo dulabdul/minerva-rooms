@@ -14,7 +14,6 @@ export default function Home() {
       <Advantage />
       <Recommendation />
       <Testimonial />
-      <Footer />
     </main>
   );
 }
