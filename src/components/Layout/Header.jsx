@@ -66,7 +66,7 @@ export default function Header() {
               return (
                 <li
                   key={index}
-                  className={`min-w-[44px] min-h-[44px] active font-light sm:font-medium ${
+                  className={`min-w-[44px] min-h-[44px] md:min-w-fit md:min-h-fit active font-light sm:font-medium ${
                     path !== '/'
                       ? 'text-primaryColor font-medium'
                       : 'sm:nav-blur text-white'
