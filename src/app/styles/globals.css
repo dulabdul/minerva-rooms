@@ -1,7 +1,7 @@
 @tailwind base;
 @layer base {
   header nav .flex button {
-    @apply text-white;
+    @apply active:bg-primaryColor hover:bg-primaryColor active:ring-0 hover:ring-0;
   }
 }
 @tailwind components;

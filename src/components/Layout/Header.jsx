@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../Button';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
   const path = usePathname();
@@ -35,7 +36,9 @@ export default function Header() {
         className='container mx-auto bg-transparent'
         fluid
         rounded>
-        <Navbar.Brand href='https://flowbite-react.com'>
+        <Link
+          href='/'
+          className='flex items-center'>
           <Image
             className='sm:w-16 sm:h-16 xl:h-auto xl:w-auto'
             src='/minervalogo1.png'
@@ -46,21 +49,30 @@ export default function Header() {
           <span className='self-center whitespace-nowrap text-lg font-light sm:font-medium text-white sm:text-primaryColor sm:text-base xl:text-xl'>
             Minerva&apos;s Rooms
           </span>
-        </Navbar.Brand>
+        </Link>
+
         <div className='flex'>
-          <Navbar.Toggle />
+          <Navbar.Toggle
+            className={`${
+              path !== '/'
+                ? 'text-primaryColor hover:text-white active:text-white'
+                : 'text-white'
+            }`}
+          />
         </div>
-        <Navbar.Collapse className='text-white'>
+        <Navbar.Collapse>
           <div className='flex flex-col xl:gap-y-4 xl:pl-4 sm:flex-row sm:gap-0 sm:pl-0 sm:gap-x-6'>
             {dataMenu.map((item, index) => {
               return (
                 <li
                   key={index}
-                  className={`active font-light sm:font-medium ${
-                    path !== '/' ? 'text-primaryColor' : 'sm:nav-blur'
+                  className={`min-w-[44px] min-h-[44px] active font-light sm:font-medium ${
+                    path !== '/'
+                      ? 'text-primaryColor font-medium'
+                      : 'sm:nav-blur text-white'
                   }`}>
                   <CustomButton
-                    className='capitalize'
+                    className='capitalize '
                     type='link'
                     href={item.destination}>
                     {item.name}
