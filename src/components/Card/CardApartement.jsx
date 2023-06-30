@@ -5,10 +5,10 @@ import CustomButton from '../Button';
 
 export default function CardApartement({
   title,
-  location,
-  imagesUrl,
+  imagesUrls,
   price,
   amenities,
+  id,
 }) {
   return (
     <div className='bg-[#FEFEFF] border border-[#DEDCDA] shadow-md w-full h-full overflow-hidden'>
@@ -18,7 +18,7 @@ export default function CardApartement({
           alt={title}
           width={350}
           height={350}
-          src={imagesUrl}
+          src={imagesUrls[0].url}
         />
       </div>
       <div className='px-3 py-4'>
@@ -27,11 +27,11 @@ export default function CardApartement({
             {title}
           </h4>
           <p className='text-tersierColor text-sm font-light capitalize'>
-            {location}
+            bekasi, jawa barat
           </p>
         </div>
         <div className='grid grid-cols-2 gap-y-3 py-4'>
-          {amenities.map((item, index) => {
+          {amenities.slice(0, 4).map((item, index) => {
             return (
               <div
                 key={index}
@@ -53,8 +53,10 @@ export default function CardApartement({
         <div className='flex flex-col items-center justify-center w-full pt-4 gap-y-4'>
           <CustomButton
             className='button text-white text-center justify-center'
-            href='/'
+            href={`https://api.whatsapp.com/send?phone=6281213366247&text=Halo%20minerva%20saya%20ingin%20rental%20apartement%20${title}%20dong`}
             isRounded
+            isExternal
+            target='_blank'
             isPrimary
             isHover
             isFull
@@ -64,7 +66,7 @@ export default function CardApartement({
           </CustomButton>
           <CustomButton
             className='button text-primaryColor text-center justify-center hover:text-white'
-            href='/'
+            href={`/detail/${id}`}
             isRounded
             isTransparent
             isFull

@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 export default function Header() {
   const path = usePathname();
+
   const dataMenu = [
     {
       name: 'home',
@@ -47,7 +48,7 @@ export default function Header() {
             alt='Minerva Logo'
           />
           <span className='self-center whitespace-nowrap text-lg font-light sm:font-medium text-white sm:text-primaryColor sm:text-base xl:text-xl'>
-            Minerva&apos;s Rooms
+            Minerva Rooms
           </span>
         </Link>
 
@@ -63,12 +64,13 @@ export default function Header() {
         <Navbar.Collapse>
           <div className='flex flex-col xl:gap-y-4 xl:pl-4 sm:flex-row sm:gap-0 sm:pl-0 sm:gap-x-6'>
             {dataMenu.map((item, index) => {
+              const isActive = path.startsWith(item.destination);
               return (
                 <li
                   key={index}
                   className={`min-w-[44px] min-h-[44px] md:min-w-fit md:min-h-fit active font-light sm:font-medium ${
                     path !== '/'
-                      ? 'text-primaryColor font-medium'
+                      ? 'text-tersierColor font-medium'
                       : 'sm:nav-blur text-white'
                   }`}>
                   <CustomButton

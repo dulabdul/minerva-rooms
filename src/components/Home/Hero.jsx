@@ -11,7 +11,7 @@ export default function Hero() {
           isBlock
           isRounded>
           {' '}
-          Minerva&apos;s Rooms
+          Minerva Rooms
         </CustomButton>
         <h1 className='text-2xl xl:text-4xl text-white sm:text-primaryColor font-semibold capitalize'>
           Temukan Tempat Untuk Transit Dengan Mudah

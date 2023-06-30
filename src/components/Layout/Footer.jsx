@@ -4,7 +4,22 @@ import CustomButton from '../Button';
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { FaTiktok } from 'react-icons/fa';
-export default function Footer() {
+
+export default async function Footer() {
+  const medsos = [
+    {
+      icons: <AiFillInstagram className='w-10 h-10' />,
+      destination: 'https://www.instagram.com/minerva.rooms',
+    },
+    {
+      icons: <BsFacebook className='w-10 h-10' />,
+      destination: 'https://www.facebook.com/profile.php?id=100077761514287',
+    },
+    {
+      icons: <FaTiktok className='w-10 h-10' />,
+      destination: 'https://www.tiktok.com/@minerva.rooms',
+    },
+  ];
   const dataMenu = [
     {
       name: 'home',
@@ -27,20 +42,7 @@ export default function Footer() {
       destination: '/kontak',
     },
   ];
-  const medsos = [
-    {
-      icons: <AiFillInstagram className='w-10 h-10' />,
-      destination: '/',
-    },
-    {
-      icons: <BsFacebook className='w-10 h-10' />,
-      destination: '/',
-    },
-    {
-      icons: <FaTiktok className='w-10 h-10' />,
-      destination: '/',
-    },
-  ];
+
   return (
     <footer className='w-full h-full overflow-hidden bg-[#F5F5F5] py-12 xl:py-20'>
       <div className='container mx-auto px-4 xl:px-6'>
@@ -55,7 +57,7 @@ export default function Footer() {
                 alt='Minerva Logo'
               />
               <span className='self-center whitespace-nowrap text-lg font-light sm:font-medium text-primaryColor sm:text-base xl:text-xl'>
-                Minerva&apos;s Rooms
+                Minerva Rooms
               </span>
             </div>
             <p className='text-sm text-secondaryColor font-light'>
@@ -113,6 +115,8 @@ export default function Footer() {
                     className='w-11 h-11'>
                     <CustomButton
                       type='link'
+                      isExternal
+                      target='_blank'
                       href={item.destination}
                       className='text-primaryColor transition hover:text-secondaryColor'>
                       {item.icons}

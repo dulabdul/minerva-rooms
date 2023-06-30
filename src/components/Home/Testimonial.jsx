@@ -6,19 +6,19 @@ export default function Testimonial() {
     {
       name: 'Faisal Safari',
       review:
-        "Wah, Minerva's bener-bener joss deh! Pelayanannya mantap banget, cepat tanggap, dan selalu siap membantu nyariin apartemen yang pas buat aku. Apartemennya juga kece abis, kondisinya super bagus deh. Makasih banyak, Minerva's'",
+        "Wah, Minerva bener-bener joss deh! Pelayanannya mantap banget, cepat tanggap, dan selalu siap membantu nyariin apartemen yang pas buat aku. Apartemennya juga kece abis, kondisinya super bagus deh. Makasih banyak, Minerva'",
       job: 'karyawan swasta',
     },
     {
       name: 'Fajri',
       review:
-        "Seru banget sewa apartemen lewat Minerva's. Pilihan apartemennya banyak, semuanya mewah dan nyaman. Aku merasa aman dan nyaman banget pas tinggal di apartemen yang mereka kasih. Customer servicenya juga oke banget. Recomended banget, guys!'",
+        "Seru banget sewa apartemen lewat Minerva. Pilihan apartemennya banyak, semuanya mewah dan nyaman. Aku merasa aman dan nyaman banget pas tinggal di apartemen yang mereka kasih. Customer servicenya juga oke banget. Recomended banget, guys!'",
       job: 'PNS',
     },
     {
       name: 'Nur aini',
       review:
-        "Makasih ya, Minerva's, udah bantu aku dapetin apartemen impian. Mereka kerjanya profesional abis, ramah banget, dan selalu ngebantu setiap langkahnya. Puas banget deh sama kualitas apartemen yang aku sewa, gak sabar buat tinggal di sana. Thank you, Minerva's!",
+        'Makasih ya, Minerva, udah bantu aku dapetin apartemen impian. Mereka kerjanya profesional abis, ramah banget, dan selalu ngebantu setiap langkahnya. Puas banget deh sama kualitas apartemen yang aku sewa, gak sabar buat tinggal di sana. Thank you, Minerva!',
       job: 'freelancer',
     },
   ];
