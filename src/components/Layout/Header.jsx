@@ -70,7 +70,7 @@ export default function Header() {
                   key={index}
                   className={`min-w-[44px] min-h-[44px] md:min-w-fit md:min-h-fit active font-light sm:font-medium ${
                     path !== '/'
-                      ? 'text-tersierColor font-medium'
+                      ? 'text-primaryColor font-medium'
                       : 'sm:nav-blur text-white'
                   }`}>
                   <CustomButton

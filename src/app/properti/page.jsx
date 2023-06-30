@@ -621,6 +621,7 @@ export default function PropertiPages() {
                   imagesUrls={item.imageUrls}
                   price={item.price}
                   amenities={item.amenities}
+                  id={item.id}
                 />
               );
             })}
