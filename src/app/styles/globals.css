@@ -1,7 +1,7 @@
 @tailwind base;
 @layer base {
   header nav .flex button {
-    @apply text-white;
+    @apply active:bg-primaryColor hover:bg-primaryColor active:ring-0 hover:ring-0;
   }
 }
 @tailwind components;
@@ -27,5 +27,16 @@
   }
   .nav-blur {
     @apply sm:px-2 sm:py-1 xl:px-4 xl:py-2 bg-[rgba(0,0,0,0.2)] rounded-[32px] border hover:bg-primaryColor cursor-pointer hover:border-primaryColor;
+  }
+  .thumbnail .item {
+    @apply relative;
+  }
+  .thumbnail .item:after {
+    content: '';
+    @apply transition-all absolute inset-0 bg-white border-2 bg-opacity-0 border-secondaryColor border-opacity-0 rounded-lg;
+  }
+  .thumbnail .selected:after {
+    content: '';
+    @apply bg-opacity-40 border-opacity-100;
   }
 }

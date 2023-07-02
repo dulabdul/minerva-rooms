@@ -2,15 +2,44 @@
 import { Navbar } from 'flowbite-react';
 import Image from 'next/image';
 import React from 'react';
+import CustomButton from '../Button';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
+  const path = usePathname();
+
+  const dataMenu = [
+    {
+      name: 'home',
+      destination: '/',
+    },
+    {
+      name: 'properti',
+      destination: '/properti',
+    },
+    {
+      name: 'Fasilitas',
+      destination: '/fasilitas',
+    },
+    {
+      name: 'Tentang Kami',
+      destination: '/tentang-kami',
+    },
+    {
+      name: 'kontak',
+      destination: '/kontak',
+    },
+  ];
   return (
     <header className='w-full top-0 z-50 absolute scrolled sm:no-scrolled'>
       <Navbar
         className='container mx-auto bg-transparent'
         fluid
         rounded>
-        <Navbar.Brand href='https://flowbite-react.com'>
+        <Link
+          href='/'
+          className='flex items-center'>
           <Image
             className='sm:w-16 sm:h-16 xl:h-auto xl:w-auto'
             src='/minervalogo1.png'
@@ -19,49 +48,40 @@ export default function Header() {
             alt='Minerva Logo'
           />
           <span className='self-center whitespace-nowrap text-lg font-light sm:font-medium text-white sm:text-primaryColor sm:text-base xl:text-xl'>
-            Minerva&apos;s Rooms
+            Minerva Rooms
           </span>
-        </Navbar.Brand>
+        </Link>
+
         <div className='flex'>
-          <Navbar.Toggle />
+          <Navbar.Toggle
+            className={`${
+              path !== '/'
+                ? 'text-primaryColor hover:text-white active:text-white'
+                : 'text-white'
+            }`}
+          />
         </div>
-        <Navbar.Collapse className='text-white'>
+        <Navbar.Collapse>
           <div className='flex flex-col xl:gap-y-4 xl:pl-4 sm:flex-row sm:gap-0 sm:pl-0 sm:gap-x-6'>
-            <li className='active sm:nav-blur font-light sm:font-medium'>
-              <a
-                href=''
-                className='z-10'>
-                Home
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                Properti
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                Fasilitas
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                About Us
-              </a>
-            </li>
-            <li className='sm:nav-blur'>
-              <a
-                href=''
-                className='z-10'>
-                Kontak
-              </a>
-            </li>
+            {dataMenu.map((item, index) => {
+              const isActive = path.startsWith(item.destination);
+              return (
+                <li
+                  key={index}
+                  className={`min-w-[44px] min-h-[44px] md:min-w-fit md:min-h-fit active font-light sm:font-medium ${
+                    path !== '/'
+                      ? 'text-primaryColor font-medium'
+                      : 'sm:nav-blur text-white'
+                  }`}>
+                  <CustomButton
+                    className='capitalize '
+                    type='link'
+                    href={item.destination}>
+                    {item.name}
+                  </CustomButton>
+                </li>
+              );
+            })}
           </div>
         </Navbar.Collapse>
       </Navbar>

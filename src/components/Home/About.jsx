@@ -28,7 +28,7 @@ export default function About() {
               Nilai yang kami berikan
             </h3>
             <Image
-              className='w-auto h-auto xl:h-[438px]'
+              className='w-auto h-auto xl:h-[438px] transition-all hover:scale-95 ease-in-out hover:z-10'
               src='/images/about1.jpg'
               width={300}
               height={438}
@@ -37,7 +37,7 @@ export default function About() {
           </div>
           <div className='w-full sm:w-1/2'>
             <Image
-              className='w-auto h-auto xl:h-[438px]'
+              className='w-auto h-auto xl:h-[438px] transition-all hover:scale-95 ease-in-out hover:z-10'
               alt='Transpark Juanda Tentang Kami'
               src='/images/about2.jpg'
               width={300}
