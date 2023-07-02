@@ -54,7 +54,7 @@ export const metadata = {
         height: 600,
       },
       {
-        url: '/minervalogo1-alt.png',
+        url: '/minervalogo1.png',
         width: 1800,
         height: 1600,
         alt: 'Minerva Rooms Logo',
