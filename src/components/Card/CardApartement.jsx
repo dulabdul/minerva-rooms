@@ -53,7 +53,7 @@ export default function CardApartement({
         <div className='flex flex-col items-center justify-center w-full pt-4 gap-y-4'>
           <CustomButton
             className='button text-white text-center justify-center'
-            href={`https://api.whatsapp.com/send?phone=6281213366247&text=Halo%20minerva%20saya%20ingin%20rental%20apartement%20${title}%20dong`}
+            href={`https://api.whatsapp.com/send?phone=6281287559854&text=Halo%20minerva%20saya%20ingin%20rental%20apartement%20${title}%20dong`}
             isRounded
             isExternal
             target='_blank'

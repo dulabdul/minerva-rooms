@@ -373,7 +373,7 @@ export default function Page() {
     },
     {
       id: 4,
-      title: 'montblanc tbc',
+      title: 'montblanc BTC',
       location:
         'Jl. HM. Joyo Martono No.30, RT.003/RW.021, Jatimulya, Kec. Bekasi Timur, Bekasi Timur, Bekasi, Jawa Barat, Indonesia, 17113',
       price: '150,000 / 3 jam',

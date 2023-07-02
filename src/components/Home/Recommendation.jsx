@@ -11,7 +11,7 @@ import { GiCctvCamera, GiArchBridge, GiTowel } from 'react-icons/gi';
 import { BsFillLampFill } from 'react-icons/bs';
 import CustomButton from '../Button';
 
-export default function Recommendation() {
+export default function Recommendation({ exploreRef }) {
   const data = [
     {
       id: 1,
@@ -369,7 +369,7 @@ export default function Recommendation() {
     },
     {
       id: 4,
-      title: 'montblanc tbc',
+      title: 'montblanc BTC',
       location:
         'Jl. HM. Joyo Martono No.30, RT.003/RW.021, Jatimulya, Kec. Bekasi Timur, Bekasi Timur, Bekasi, Jawa Barat, Indonesia, 17113',
       price: '150,000 / 3 jam',
@@ -603,7 +603,9 @@ export default function Recommendation() {
     },
   ];
   return (
-    <section className='w-full overflow-hidden px-4 py-12 md:py-24'>
+    <section
+      ref={exploreRef}
+      className='w-full overflow-hidden px-4 py-12 md:py-24'>
       <div className='container mx-auto'>
         <div className='flex items-center gap-x-2'>
           <svg

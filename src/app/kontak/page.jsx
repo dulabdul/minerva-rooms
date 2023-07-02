@@ -67,11 +67,11 @@ export default function page() {
           </h6>
           <CustomButton
             className='text-secondaryColor font-light text-base xl:text-xl hover:text-primaryColor'
-            href='https://api.whatsapp.com/send?phone=6281213366247&text=Halo%20Minerva%20saya%20ingin%20nanya%20tentang%20rental%20apartement%20nya%20dong'
+            href='https://api.whatsapp.com/send?phone=6281287559854&text=Halo%20Minerva%20saya%20ingin%20nanya%20tentang%20rental%20apartement%20nya%20dong'
             type='link'
             isExternal
             target='_blank'>
-            +6289689156131
+            +6281287559854
           </CustomButton>
         </div>
         <div className='flex flex-col items-center justify-center pt-4 gap-y-1'>

@@ -21,7 +21,7 @@ export default function CardDetail({
     setSelectDuration(e.target.value);
   };
   const parseJSON = !selectDuration ? '' : JSON.parse(selectDuration);
-  console.log(parseJSON);
+
   return (
     <div className='container mx-auto'>
       <div>
@@ -181,7 +181,7 @@ export default function CardDetail({
                   type='link'
                   isExternal
                   target='_blank'
-                  href={`https://api.whatsapp.com/send?phone=6281213366247&text=Halo%20Minerva%20Saya%20mau%20booking%20kamar%20ya%20min%2C%20dapat%20info%20dari%20Website%20Minerva.%20*Unit%3A*%20${title}%20*Durasi%20Sewa:*%20${
+                  href={`https://api.whatsapp.com/send?phone=6281287559854&text=Halo%20Minerva%20Saya%20mau%20booking%20kamar%20ya%20min%2C%20dapat%20info%20dari%20Website%20Minerva.%20*Unit%3A*%20${title}%20*Durasi%20Sewa:*%20${
                     parseJSON ? parseJSON.duration : '3'
                   }%20jam%20*Tipe%20Kamar%20%3A*%20${selectRoom}%20.Terimakasih%20ya%20min`}
                   isHover
