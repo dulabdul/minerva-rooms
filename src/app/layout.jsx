@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Minerva Room | ',
+  title: 'Minerva Room',
   description:
     'Butuh tempat tinggal transit, harian, atau mingguan dengan harga terjangkau? Sewa apartemen di Minerva Room adalah pilihan yang cocok untuk staycation kamu bersama orang tersayang.',
   generator: 'Next.js',
@@ -75,6 +75,9 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'GmTsvMzfiS60zwLJ_YkyITdo0Y7ph59dvEwiNBEiipI',
   },
 };
 
