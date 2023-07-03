@@ -76,7 +76,7 @@ export default async function Footer() {
               target='_blank'
               href='/'
               className='text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
-              0896-7529-3838
+              0896-8915-6131
             </CustomButton>
             <CustomButton
               type='link'
