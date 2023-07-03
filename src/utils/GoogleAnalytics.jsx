@@ -5,7 +5,7 @@ export default function GoogleAnalytics({ GA_TRACKING_ID }) {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id='${GA_TRACKING_ID}'`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         strategy='afterInteractive'
       />
       <Script
