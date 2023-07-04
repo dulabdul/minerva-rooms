@@ -8,14 +8,17 @@ import { FaTiktok } from 'react-icons/fa';
 export default async function Footer() {
   const medsos = [
     {
+      name: 'instragam',
       icons: <AiFillInstagram className='w-10 h-10' />,
       destination: 'https://www.instagram.com/minerva.rooms',
     },
     {
+      name: 'facebook',
       icons: <BsFacebook className='w-10 h-10' />,
       destination: 'https://www.facebook.com/profile.php?id=100077761514287',
     },
     {
+      name: 'tiktok',
       icons: <FaTiktok className='w-10 h-10' />,
       destination: 'https://www.tiktok.com/@minerva.rooms',
     },
@@ -67,15 +70,15 @@ export default async function Footer() {
             </p>
           </div>
           <div className='flex flex-col justify-start'>
-            <h6 className='text-lg font-medium text-secondaryColor pb-2'>
+            <p className='text-lg font-medium text-secondaryColor pb-2'>
               Contact
-            </h6>
+            </p>
             <CustomButton
               type='link'
               isExternal
               target='_blank'
               href='https://api.whatsapp.com/send?phone=6289689156131&text=Halo%20Minerva%20saya%20ingin%20nanya%20tentang%20rental%20apartement%20nya%20dong'
-              className='text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
+              className='min-w-[48px] min-h-[48px] text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
               0896-8915-6131
             </CustomButton>
             <CustomButton
@@ -83,14 +86,12 @@ export default async function Footer() {
               isExternal
               target='_blank'
               href='mailto:minerva.rooms@gmail.com'
-              className='text-sm font-normal text-tersierColor md:text-base  hover:text-primaryColor'>
+              className='min-w-[48px] min-h-[48px] text-sm font-normal text-tersierColor md:text-base  hover:text-primaryColor'>
               minerva.rooms@gmail.com
             </CustomButton>
           </div>
           <div className='flex flex-col justify-start'>
-            <h6 className='text-lg font-medium text-secondaryColor pb-2'>
-              Menu
-            </h6>
+            <p className='text-lg font-medium text-secondaryColor pb-2'>Menu</p>
             {dataMenu.map((item, index) => {
               return (
                 <CustomButton
@@ -104,9 +105,9 @@ export default async function Footer() {
             })}
           </div>
           <div className='flex flex-col justify-end'>
-            <h6 className='text-lg font-medium text-secondaryColor'>
+            <p className='text-lg font-medium text-secondaryColor'>
               Ikuti Kami
-            </h6>
+            </p>
             <div className='flex items-center justify-start gap-x-3 xl:gap-x-4'>
               {medsos.map((item, index) => {
                 return (
@@ -116,6 +117,7 @@ export default async function Footer() {
                     <CustomButton
                       type='link'
                       isExternal
+                      ariaLabel={`kunjungi media sosial kami di ${item.name}`}
                       target='_blank'
                       href={item.destination}
                       className='text-primaryColor transition hover:text-secondaryColor'>

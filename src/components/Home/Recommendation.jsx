@@ -651,6 +651,7 @@ export default function Recommendation({ exploreRef }) {
           <CustomButton
             className='button text-white justify-center w-1/2 md:w-1/3'
             type='link'
+            ariaLabel='lihat semua properti kami'
             isRounded
             isPrimary
             isHover

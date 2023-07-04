@@ -55,6 +55,7 @@ export default function About() {
               isPrimary
               isBlock
               isHover
+              ariaLabel='baca lebih lanjut'
               href='/tentang-kami'
               type='link'>
               Baca Lebih Lanjut

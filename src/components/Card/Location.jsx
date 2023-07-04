@@ -13,9 +13,9 @@ export default function Location({ imageUrl, location, title }) {
           height={375}
         />
       </div>
-      <h6 className='font-medium text-lg text-secondaryColor capitalize mt-2 md:mt-4'>
+      <p className='font-medium text-lg text-secondaryColor capitalize mt-2 md:mt-4'>
         {title}
-      </h6>
+      </p>
       <p className='text-tersierColor font-light text-sm capitalize mt-1'>
         {location}
       </p>

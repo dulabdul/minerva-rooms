@@ -57,6 +57,7 @@ export default function CardApartement({
             isRounded
             isExternal
             target='_blank'
+            ariaLabel='Rental sekarang'
             isPrimary
             isHover
             isFull
@@ -69,6 +70,7 @@ export default function CardApartement({
             href={`/detail/${id}`}
             isRounded
             isTransparent
+            ariaLabel={`kunjungi halaman detail ${title}`}
             isFull
             isFlex
             type='link'>

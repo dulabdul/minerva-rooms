@@ -3,12 +3,11 @@ import { Navbar } from 'flowbite-react/lib/cjs/components/Navbar';
 import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../Button';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const path = usePathname();
-
   const dataMenu = [
     {
       name: 'home',
@@ -64,7 +63,6 @@ export default function Header() {
         <Navbar.Collapse>
           <div className='flex flex-col xl:gap-y-4 xl:pl-4 sm:flex-row sm:gap-0 sm:pl-0 sm:gap-x-6'>
             {dataMenu.map((item, index) => {
-              const isActive = path.startsWith(item.destination);
               return (
                 <li
                   key={index}
@@ -76,6 +74,7 @@ export default function Header() {
                   <CustomButton
                     className='capitalize '
                     type='link'
+                    ariaLabel={`halaman ${item.name}`}
                     href={item.destination}>
                     {item.name}
                   </CustomButton>

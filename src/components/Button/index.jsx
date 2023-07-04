@@ -39,6 +39,7 @@ export default function CustomButton(props) {
     if (props.isExternal) {
       return (
         <a
+          aria-label={props.ariaLabel}
           onClick={props.onClick}
           href={props.href}
           className={className.join(' ')}
@@ -99,6 +100,7 @@ CustomButton.propTypes = {
   isPrimary: propTypes.bool,
   isRounded: propTypes.bool,
   isHover: propTypes.bool,
+  ariaLabel: propTypes.bool,
   isRoundedFull: propTypes.bool,
   isExternal: propTypes.bool,
   hasShadow: propTypes.bool,

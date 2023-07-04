@@ -49,7 +49,7 @@ export default function Hero({ exploreRef }) {
           <Image
             loading='eager'
             className='absolute w-full h-full inset-0 sm:relative object-cover object-center sm:rounded-bl-[80px]'
-            src='/images/hero_1.webp'
+            src='/images/hero1.webp'
             quality={30}
             width={900}
             height={400}
