@@ -78,7 +78,7 @@ export default async function Footer() {
               isExternal
               target='_blank'
               href='https://api.whatsapp.com/send?phone=6289689156131&text=Halo%20Minerva%20saya%20ingin%20nanya%20tentang%20rental%20apartement%20nya%20dong'
-              className='text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
+              className='min-w-[48px] min-h-[48px] text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
               0896-8915-6131
             </CustomButton>
             <CustomButton
@@ -86,7 +86,7 @@ export default async function Footer() {
               isExternal
               target='_blank'
               href='mailto:minerva.rooms@gmail.com'
-              className='text-sm font-normal text-tersierColor md:text-base  hover:text-primaryColor'>
+              className='min-w-[48px] min-h-[48px] text-sm font-normal text-tersierColor md:text-base  hover:text-primaryColor'>
               minerva.rooms@gmail.com
             </CustomButton>
           </div>
