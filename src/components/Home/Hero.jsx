@@ -47,8 +47,10 @@ export default function Hero({ exploreRef }) {
         <div className='relative min-h-[90vh] sm:min-h-[auto]'>
           <div className='sm:invisible absolute inset-0 bg-black opacity-40 z-10 sm:rounded-bl-[80px]'></div>
           <Image
+            loading='eager'
             className='absolute w-full h-full inset-0 sm:relative object-cover object-center sm:rounded-bl-[80px]'
-            src='/images/hero_1.jpg'
+            src='/images/hero_1.webp'
+            quality={30}
             width={900}
             height={400}
             alt='Springlake Summarecon Hero'

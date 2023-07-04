@@ -74,7 +74,7 @@ export default async function Footer() {
               type='link'
               isExternal
               target='_blank'
-              href='/'
+              href='https://api.whatsapp.com/send?phone=6289689156131&text=Halo%20Minerva%20saya%20ingin%20nanya%20tentang%20rental%20apartement%20nya%20dong'
               className='text-sm font-normal text-tersierColor pb-2 md:text-base hover:text-primaryColor'>
               0896-8915-6131
             </CustomButton>
