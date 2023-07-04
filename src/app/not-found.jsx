@@ -25,6 +25,7 @@ export default function notFound() {
           </div>
           <CustomButton
             type='link'
+            ariaLabel='kembali ke beranda'
             href='/'
             isPrimary
             isHover

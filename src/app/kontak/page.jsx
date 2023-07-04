@@ -7,16 +7,19 @@ import Location from '@/components/Card/Location';
 export default function page() {
   const medsos = [
     {
+      name: 'instragam',
       icons: <AiFillInstagram className='w-10 h-10' />,
-      destination: '/',
+      destination: 'https://www.instagram.com/minerva.rooms',
     },
     {
+      name: 'facebook',
       icons: <BsFacebook className='w-10 h-10' />,
-      destination: '/',
+      destination: 'https://www.facebook.com/profile.php?id=100077761514287',
     },
     {
+      name: 'tiktok',
       icons: <FaTiktok className='w-10 h-10' />,
-      destination: '/',
+      destination: 'https://www.tiktok.com/@minerva.rooms',
     },
   ];
   const locationData = [
@@ -62,35 +65,37 @@ export default function page() {
           menghubungi tim kami.
         </p>
         <div className='flex flex-col items-center justify-center pt-12 gap-y-1'>
-          <h6 className='font-medium text-lg xl:text-2xl text-tersierColor'>
+          <p className='font-medium text-lg xl:text-2xl text-tersierColor'>
             Telepon / Whatsapp
-          </h6>
+          </p>
           <CustomButton
-            className='text-secondaryColor font-light text-base xl:text-xl hover:text-primaryColor'
+            className='text-secondaryColor font-light text-base xl:text-xl hover:text-primaryColor min-w-[48px] min-h-[48px]'
             href='https://api.whatsapp.com/send?phone=6289689156131&text=Halo%20Minerva%20saya%20ingin%20nanya%20tentang%20rental%20apartement%20nya%20dong'
             type='link'
+            ariaLabel='Hubungi whatsapp official kami'
             isExternal
             target='_blank'>
             +6289689156131
           </CustomButton>
         </div>
         <div className='flex flex-col items-center justify-center pt-4 gap-y-1'>
-          <h6 className='font-medium text-lg xl:text-xl text-tersierColor'>
+          <p className='font-medium text-lg xl:text-xl text-tersierColor'>
             E-Mail
-          </h6>
+          </p>
           <CustomButton
-            className='text-secondaryColor font-light text-base xl:text-xl hover:text-primaryColor'
+            className='text-secondaryColor font-light text-base xl:text-xl hover:text-primaryColor min-w-[48px] min-h-[48px]'
             href='mailto:minerva.rooms@gmail.com'
             type='link'
+            ariaLabel='Hubungi email official kami'
             isExternal
             target='_blank'>
             minerva.rooms@gmail.com
           </CustomButton>
         </div>
         <div className='flex flex-col items-center justify-center pt-4 gap-y-1 '>
-          <h6 className='font-medium text-lg xl:text-xl text-tersierColor'>
+          <p className='font-medium text-lg xl:text-xl text-tersierColor'>
             Media Sosial
-          </h6>
+          </p>
           <div className='flex flex-row gap-x-2 pt-4'>
             {medsos.map((item, index) => {
               return (
@@ -99,6 +104,9 @@ export default function page() {
                   className='w-11 h-11'>
                   <CustomButton
                     type='link'
+                    isExternal
+                    target='_blank'
+                    ariaLabel={`kunjungi media sosial kami di ${item.name}`}
                     href={item.destination}
                     className='text-primaryColor transition hover:text-secondaryColor'>
                     {item.icons}

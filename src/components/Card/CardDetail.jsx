@@ -65,9 +65,9 @@ export default function CardDetail({
             </div>
           </div>
           <div className='detail w-full col-start-1 col-end-12 xl:col-end-9 overflow-hidden ml-2 xl:ml-3 py-2'>
-            <h6 className='font-medium text-secondaryColor text-xl xl:text-2xl capitalize mb-1'>
+            <p className='font-medium text-secondaryColor text-xl xl:text-2xl capitalize mb-1'>
               {title}
-            </h6>
+            </p>
             <p className='text-tersierColor font-light text-sm mr-3'>
               {location}
             </p>
@@ -87,9 +87,9 @@ export default function CardDetail({
                 );
               })}
             </div>
-            <h6 className='text-lg xl:text-xl font-medium text-secondaryColor capitalize py-3 xl:py-5'>
+            <p className='text-lg xl:text-xl font-medium text-secondaryColor capitalize py-3 xl:py-5'>
               amenities room
-            </h6>
+            </p>
             <div className='w-full flex items-center justify-start flex-row flex-wrap gap-3 gap-y-5'>
               {amenities.map((item, index) => {
                 return (
@@ -179,6 +179,7 @@ export default function CardDetail({
                 <CustomButton
                   className='button text-white justify-center mt-4 mb-1'
                   type='link'
+                  ariaLabel='Booking kamar sekarang'
                   isExternal
                   target='_blank'
                   href={`https://api.whatsapp.com/send?phone=6289689156131&text=Halo%20Minerva%20Saya%20mau%20booking%20kamar%20ya%20min%2C%20dapat%20info%20dari%20Website%20Minerva.%20*Unit%3A*%20${title}%20*Durasi%20Sewa:*%20${
