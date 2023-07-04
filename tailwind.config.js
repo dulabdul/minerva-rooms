@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     colors: {
-      primaryColor: '#996600',
+      primaryColor: '#C07F00',
       secondaryColor: '#1B1C57',
       tersierColor: '#A6A6A6',
     },
