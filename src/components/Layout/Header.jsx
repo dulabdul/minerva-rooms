@@ -1,5 +1,5 @@
 'use client';
-import { Navbar } from 'flowbite-react';
+import { Navbar } from 'flowbite-react/lib/cjs/components/Navbar';
 import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../Button';

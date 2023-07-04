@@ -30,6 +30,7 @@ export default function About() {
             <Image
               className='w-auto h-auto xl:h-[438px] transition-all hover:scale-95 ease-in-out hover:z-10'
               src='/images/about1.jpg'
+              quality={40}
               width={300}
               height={438}
               alt='Patraland Urbano Tentang Kami'
